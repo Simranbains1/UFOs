@@ -40,7 +40,7 @@ function updateFilters() {
     let filterId = changedElement.attr("id");
     console.log(filterId);
   
-    // 5. If a filter value was entered then add that filterId and value
+    // 5. If a filter value was entered then add that filterId and value 
     // to the filters list. Otherwise, clear that filter from the filters object.
     if (elementValue) {
       filters[filterId] = elementValue;
@@ -59,8 +59,7 @@ function updateFilters() {
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData;
   
-    // 9. Loop through all of the filters and keep any data that
-    // matches the filter values
+    // 9. Loop through all of the filters and keep any data that matches the filter values
     Object.entries(filters).forEach(([key,value])=> {
       filteredData =  filteredData.filter(row => row[key]=== value);
     });
